@@ -20,7 +20,7 @@ From Source:
 
 ::
 
-$ git clone https://github.com/luminanetworks/topology-yaml
+$ git clone https://github.com/lumina-networks/topology-yaml
 $ cd topology-yaml
 $ sudo pip install .
 
