@@ -1,0 +1,8 @@
+$ topology-yaml delete --help
+Usage: topology-yaml delete [OPTIONS] [FILENAME]
+
+  Delete Topology File
+
+Options:
+  --help  Show this message and exit.
+

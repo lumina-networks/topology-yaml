@@ -1,0 +1,7 @@
+Options:  
+  --help  Show this message and exit.
+
+Commands:
+  create  Create Topology File
+  delete  Delete Topology File
+  read    Read Topology File

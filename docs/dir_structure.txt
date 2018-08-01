@@ -1,0 +1,13 @@
+.
+├── README.rst
+├── docs              - Documentation directory
+    +-- _build        - Sphinx generated documentation
+├── tests              
+├── topology
+    +-- core          - Internal logic to create and validate topology files.
+    +── api.py        - Entry point for other libraries (Python bindings)
+    +── cli.py
+├── requirements.txt  - Required libraries for development
+├── setup.py          - Python script to setup and install Topology
+├── tox.ini           
+├── Makefile          - Useful scripts during development

@@ -1,0 +1,7 @@
+click
+click-plugins
+PyYAML
+pytest
+tox
+sphinx
+sphinx-rtd-theme

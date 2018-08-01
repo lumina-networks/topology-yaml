@@ -1,0 +1,9 @@
+$ topology-yaml read --help
+Usage: topology-yaml read [OPTIONS] [FILENAME]
+
+  Read Topology File
+
+Options:
+  --format [yaml|yml|json]  Output Format
+  --help                    Show this message and exit.
+

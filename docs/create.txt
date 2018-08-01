@@ -1,0 +1,12 @@
+$ topology-yaml create --help
+Usage: topology-yaml create [OPTIONS] [FILENAME]
+
+  Create Topology File
+
+Options:
+  --data TEXT      Dictionary String NOTE: This argument is mutually exclusive
+                   with  arguments: [json].
+  --json FILENAME  JSON filename NOTE: This argument is mutually exclusive
+                   with  arguments: [data].
+  --help           Show this message and exit.
+
