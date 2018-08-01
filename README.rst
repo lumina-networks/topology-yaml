@@ -39,13 +39,14 @@ Usage
 
 $ Usage: topology-yaml [OPTIONS] COMMAND [ARGS]...
 
-.. literalinclude:: topology_options.txt
+Options:
+  --help  Show this message and exit.
 
+Commands:
+  create  Create Topology File
+  delete  Delete Topology File
+  read    Read Topology File
 
-Directory Structure
-~~~~~~~~~~~~~~~~~~~
-
-.. literalinclude:: dir_structure.txt
 
 Documentation
 ~~~~~~~~~~~~~
