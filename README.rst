@@ -37,15 +37,15 @@ Usage
 **topology-yaml** will be the command after installation. For example:
 ::
 
-$ Usage: topology-yaml [OPTIONS] COMMAND [ARGS]...
+    $ Usage: topology-yaml [OPTIONS] COMMAND [ARGS]...
 
-Options:
-  --help  Show this message and exit.
+    Options:
+      --help  Show this message and exit.
 
-Commands:
-  create  Create Topology File
-  delete  Delete Topology File
-  read    Read Topology File
+    Commands:
+      create  Create Topology File
+      delete  Delete Topology File
+      read    Read Topology File
 
 
 Documentation
