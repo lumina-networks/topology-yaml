@@ -22,6 +22,10 @@ def mock_topo_props(request):
         },{
             'name': 'switch_2',
             'dpid': '456'
+        }],
+        'customers': [{
+            'hostname': 'switch_1',
+            'port': 20
         }]
     }
 
@@ -49,7 +53,11 @@ def mock_topo_full(request):
             'name': 'switch_2',
             'dpid': '456'
         }],
-        'interfaces': []
+        'interfaces': [],
+        'customers': [{
+            'hostname': 'switch_1',
+            'port': 20
+        }]
     }
 
 
@@ -72,6 +80,9 @@ switches:
   name: switch_1
 - dpid: '456'
   name: switch_2
+customers:
+- hostname: switch_1
+  port: 20
 '''
 
 

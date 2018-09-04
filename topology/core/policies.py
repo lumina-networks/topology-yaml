@@ -52,6 +52,14 @@ def valid_interface_id_property(props):
     return valid_id_prop(constants.ID_INTERFACE_PROPS, props)
 
 
+def valid_customer_properties(props):
+    return valid_properties(constants.ALL_CUSTOMER_PROPS, constants.MANDATORY_CUSTOMER_PROPS, props)
+
+
+def valid_customer_id_property(props):
+    return valid_id_prop(constants.ID_CUSTOMER_PROPS, props)
+
+
 def valid_properties(all_props, mandatory_props, props):
     invalid_props = set(props).difference(all_props)
     missing_props = mandatory_props.difference(props)

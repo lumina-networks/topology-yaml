@@ -24,6 +24,10 @@ def mock_topo_props(request):
         },{
             'name': 'switch_2',
             'dpid': '456'
+        }],
+        'customers': [{
+            'hostname': 'switch_1',
+            'port': 20
         }]
     }
 
@@ -33,6 +37,7 @@ def test_set_properties(mock_topo_props):
     assert topo.controllers == mock_topo_props['controllers']
     assert topo.links == mock_topo_props['links']
     assert topo.switches == mock_topo_props['switches']
+    assert topo.customers == mock_topo_props['customers']
 
 
 def test_validate(mock_topo_props):

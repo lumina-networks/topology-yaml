@@ -11,6 +11,7 @@ class Topology(object):
         self.switches = []
         self.links = []
         self.interfaces = []
+        self.customers = []
 
     def set_properties(self, props):
         self._set_list_property('controllers', policies.valid_controller_properties, props.get('controllers', []))
@@ -18,6 +19,7 @@ class Topology(object):
         self._set_list_property('switches', policies.valid_switch_properties, props.get('switches', []))
         self._set_list_property('links', policies.valid_link_properties, props.get('links', []))
         self._set_list_property('interfaces', policies.valid_interface_properties, props.get('interfaces', []))
+        self._set_list_property('customers', policies.valid_customer_properties, props.get('customers', []))
 
     def validate(self, policy=DEFAULT_POLICY, props=None):
         if props is None:

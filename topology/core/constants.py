@@ -1,5 +1,5 @@
-ALL_TOPOLOGY_PROPS = {'controllers', 'hosts', 'switches', 'links', 'interfaces'}
-MANDATORY_TOPOLOGY_PROPS = {'controllers'}
+ALL_TOPOLOGY_PROPS = {'controllers', 'hosts', 'switches', 'links', 'interfaces', 'customers'}
+MANDATORY_TOPOLOGY_PROPS = {'controllers', 'customers'}
 
 ALL_CONTROLLER_PROPS = {'name', 'protocol', 'vip', 'ip', 'port', 'user', 'password',
                         'timeout', 'ssh_user', 'ssh_password', 'ssh_port'}
@@ -22,6 +22,10 @@ ALL_INTERFACE_PROPS = {'name', 'switch'}
 MANDATORY_INTERFACE_PROPS = {'name', 'switch'}
 ID_INTERFACE_PROPS = {'name'}
 
+ALL_CUSTOMER_PROPS = {'hostname', 'port', 'connects_to', 'customer'}
+MANDATORY_CUSTOMER_PROPS = {'hostname', 'port'}
+ID_CUSTOMER_PROPS = {'hostname', 'port'}
+
 DEFAULT_TOPOLOGY = {
         'controllers': [{
             'name': 'test_controller',
@@ -43,5 +47,9 @@ DEFAULT_TOPOLOGY = {
             'name': 'switch_2',
             'dpid': '456'
         }],
-        'interfaces': []
+        'interfaces': [],
+        'customers': [{
+            'hostname': 'switch_1',
+            'port': 20
+        }]
     }
