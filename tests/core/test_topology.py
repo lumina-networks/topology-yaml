@@ -26,7 +26,9 @@ def mock_topo_props(request):
             'dpid': '456'
         }],
         'customers': [{
-            'hostname': 'switch_1',
+            'customer': 'test_customer',
+            'connects_to': 'test_endpoint_name',
+            'hostname': 'test_host_name',
             'port': 20
         }]
     }

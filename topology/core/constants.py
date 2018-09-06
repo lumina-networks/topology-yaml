@@ -23,8 +23,8 @@ MANDATORY_INTERFACE_PROPS = {'name', 'switch'}
 ID_INTERFACE_PROPS = {'name'}
 
 ALL_CUSTOMER_PROPS = {'hostname', 'port', 'connects_to', 'customer'}
-MANDATORY_CUSTOMER_PROPS = {'hostname', 'port'}
-ID_CUSTOMER_PROPS = {'hostname', 'port'}
+MANDATORY_CUSTOMER_PROPS = {'hostname', 'port', 'connects_to', 'customer'}
+ID_CUSTOMER_PROPS = {'hostname', 'port', 'connects_to', 'customer'}
 
 DEFAULT_TOPOLOGY = {
         'controllers': [{
@@ -49,7 +49,9 @@ DEFAULT_TOPOLOGY = {
         }],
         'interfaces': [],
         'customers': [{
-            'hostname': 'switch_1',
-            'port': 20
+             'customer': 'test_customer',
+             'connects_to': 'test_endpoint_name',
+             'hostname': 'test_host_name',
+             'port': 20
         }]
     }
