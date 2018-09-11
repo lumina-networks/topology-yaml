@@ -1,7 +1,4 @@
 import constants
-from .exceptions import InvalidPropertyException
-from .exceptions import InvalidIDException
-from .exceptions import MandatoryPropertyException
 
 
 def all_fields_mandatory(props):
@@ -61,12 +58,18 @@ def valid_customer_id_property(props):
 
 
 def valid_properties(all_props, mandatory_props, props):
+
     invalid_props = set(props).difference(all_props)
     missing_props = mandatory_props.difference(props)
+
     if invalid_props:
-        raise InvalidPropertyException(invalid_props=invalid_props)
+        message = "ERROR: Invalid properties set: {}"
+        print(message.format(', '.join(invalid_props)))
+
     elif missing_props:
-        raise MandatoryPropertyException(mandatory_props=missing_props)
+        message = "ERROR: Mandatory properties not set: {}"
+        print(message.format(', '.join(missing_props)))
+
     return True
 
 
@@ -74,4 +77,5 @@ def valid_id_prop(id_props, props):
     if (id_props.difference(props)) > 2:
         return True
     else:
-        raise InvalidIDException(invalid_ids=props)
+        message = "ERROR: Invalid IDs in: {}"
+        print(message.format(', '.join(props)))
