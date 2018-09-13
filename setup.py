@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="topology-yaml",
-    version="0.1.2.1",
+    version="0.1.2.2",
     url="https://github.com/lumina-networks/topology-yaml",
 
     author="Lumina NetDev",

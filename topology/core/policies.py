@@ -1,4 +1,5 @@
 import constants
+import logging
 
 
 def all_fields_mandatory(props):
@@ -64,11 +65,11 @@ def valid_properties(all_props, mandatory_props, props):
 
     if invalid_props:
         message = "ERROR: Invalid properties set: {}"
-        print(message.format(', '.join(invalid_props)))
+        logging.error(message.format(', '.join(invalid_props)))
 
     elif missing_props:
         message = "ERROR: Mandatory properties not set: {}"
-        print(message.format(', '.join(missing_props)))
+        logging.error(message.format(', '.join(missing_props)))
 
     return True
 
@@ -78,4 +79,4 @@ def valid_id_prop(id_props, props):
         return True
     else:
         message = "ERROR: Invalid IDs in: {}"
-        print(message.format(', '.join(props)))
+        logging.error(message.format(', '.join(props)))
