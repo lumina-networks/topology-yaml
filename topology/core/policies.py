@@ -1,5 +1,6 @@
 import constants
 import logging
+logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s')
 
 
 def all_fields_mandatory(props):
