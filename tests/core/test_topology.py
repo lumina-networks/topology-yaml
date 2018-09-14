@@ -20,10 +20,12 @@ def mock_topo_props(request):
         }],
         'switches': [{
             'name': 'switch_1',
-            'dpid': '123'
+            'dpid': '123',
+            'protocol': 'OpenFlow13'
         },{
             'name': 'switch_2',
-            'dpid': '456'
+            'dpid': '456',
+            'protocol': 'OpenFlow13'
         }],
         'customers': [{
             'customer': 'test_customer',

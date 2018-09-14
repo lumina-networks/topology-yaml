@@ -18,13 +18,17 @@ def mock_topo_props(request):
         }],
         'switches': [{
             'name': 'switch_1',
-            'dpid': '123'
+            'dpid': '123',
+            'protocol': 'OpenFlow13'
         },{
             'name': 'switch_2',
-            'dpid': '456'
+            'dpid': '456',
+            'protocol': 'OpenFlow13'
         }],
         'customers': [{
-            'hostname': 'switch_1',
+            'customer': 'test_customer',
+            'connects_to': 'test_endpoint_name',
+            'hostname': 'test_host_name',
             'port': 20
         }]
     }
@@ -48,14 +52,18 @@ def mock_topo_full(request):
         }],
         'switches': [{
             'name': 'switch_1',
-            'dpid': '123'
+            'dpid': '123',
+            'protocol': 'OpenFlow13'
         },{
             'name': 'switch_2',
-            'dpid': '456'
+            'dpid': '456',
+            'protocol': 'OpenFlow13'
         }],
         'interfaces': [],
         'customers': [{
-            'hostname': 'switch_1',
+            'customer': 'test_customer',
+            'connects_to': 'test_endpoint_name',
+            'hostname': 'test_host_name',
             'port': 20
         }]
     }
@@ -78,10 +86,14 @@ links:
 switches:
 - dpid: '123'
   name: switch_1
+  protocol: OpenFlow13
 - dpid: '456'
   name: switch_2
+  protocol: OpenFlow13
 customers:
-- hostname: switch_1
+- connects_to: test_endpoint_name
+  customer: test_customer
+  hostname: test_host_name
   port: 20
 '''
 

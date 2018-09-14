@@ -11,7 +11,7 @@ MANDATORY_HOST_PROPS = {'name', 'ip'}
 ID_HOST_PROPS = {'name', 'ip'}
 
 ALL_SWITCH_PROPS = {'name', 'dpid', 'type', 'user', 'password', 'ip', 'port', 'protocol'}
-MANDATORY_SWITCH_PROPS = {'name', 'dpid'}
+MANDATORY_SWITCH_PROPS = {'name', 'dpid', 'protocol'}
 ID_SWITCH_PROPS = {'name', 'dpid', 'ip'}
 
 ALL_LINK_PROPS = {'destination', 'destination_port', 'source', 'source_port'}
@@ -42,10 +42,12 @@ DEFAULT_TOPOLOGY = {
         }],
         'switches': [{
             'name': 'switch_1',
-            'dpid': '123'
+            'dpid': '123',
+            'protocol': 'OpenFlow13'
         },{
             'name': 'switch_2',
-            'dpid': '456'
+            'dpid': '456',
+            'protocol': 'OpenFlow13'
         }],
         'interfaces': [],
         'customers': [{
