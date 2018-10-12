@@ -65,12 +65,17 @@ def valid_properties(all_props, mandatory_props, props):
     missing_props = mandatory_props.difference(props)
 
     if invalid_props:
-        message = "ERROR: Invalid properties set: {}"
+        message = "Invalid properties set: {}"
         logging.error(message.format(', '.join(invalid_props)))
+        logging.info("properties of object in error: {}".format(', '.join(props.keys())))
+        logging.info("values of object in error: {}".format(', '.join(props.values())))
 
     elif missing_props:
-        message = "ERROR: Mandatory properties not set: {}"
+        message = "Mandatory properties not set: {}"
         logging.error(message.format(', '.join(missing_props)))
+        logging.info("properties of object in error: {}".format(', '.join(props.keys())))
+        logging.info("values of object in error: {}".format(', '.join(props.values())))
+
 
     return True
 

@@ -4,7 +4,11 @@ from click_plugins import with_plugins
 import api
 from topology.core import utils
 from topology.core.constants import DEFAULT_TOPOLOGY
+import logging
+import coloredlogs
+import sys
 
+coloredlogs.install(level='INFO', fmt='%(asctime)s %(levelname)s %(message)s')
 
 class MutuallyExclusiveOption(click.Option):
     def __init__(self, *args, **kwargs):
@@ -57,8 +61,10 @@ def create(filename, data, json):
     elif json:
         try:
             json = utils.json_load_byteified(json)
-        except ValueError:
-            raise click.BadParameter('json file does not appear to contain valid json')
+        except ValueError, e:
+            # raise click.BadParameter('json file does not appear to contain valid json')
+            logging.error(e)
+            sys.exit(0)
         api.create_topology(filename, **json)
     else:
         api.create_topology(filename, **DEFAULT_TOPOLOGY)
