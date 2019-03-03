@@ -30,6 +30,8 @@ class Topology(object):
         list_prop = []
         for value in values:
             if self.validate(policy, value):
+                if prop_name is 'switches' and type(value['dpid']) is int:
+                    value['dpid'] = str(value.get('dpid'))
                 list_prop.append(value)
         setattr(self, prop_name, list_prop)
 

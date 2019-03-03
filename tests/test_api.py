@@ -26,8 +26,8 @@ def mock_topo_props(request):
             'protocol': 'OpenFlow13'
         }],
         'customers': [{
-            'customer': 'test_customer',
             'connects_to': 'test_endpoint_name',
+            'customer': 'test_customer',
             'hostname': 'test_host_name',
             'port': 20
         }]
@@ -61,8 +61,8 @@ def mock_topo_full(request):
         }],
         'interfaces': [],
         'customers': [{
-            'customer': 'test_customer',
             'connects_to': 'test_endpoint_name',
+            'customer': 'test_customer',
             'hostname': 'test_host_name',
             'port': 20
         }]
@@ -78,6 +78,11 @@ def mock_topo_content(request):
   port: 8443
   protocol: https
   user: admin
+customers:
+- connects_to: test_endpoint_name
+  customer: test_customer
+  hostname: test_host_name
+  port: 20
 hosts: []
 interfaces: []
 links:
@@ -90,11 +95,6 @@ switches:
 - dpid: '456'
   name: switch_2
   protocol: OpenFlow13
-customers:
-- connects_to: test_endpoint_name
-  customer: test_customer
-  hostname: test_host_name
-  port: 20
 '''
 
 

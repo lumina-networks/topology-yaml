@@ -73,9 +73,12 @@ def valid_properties(all_props, mandatory_props, props):
     elif missing_props:
         message = "Mandatory properties not set: {}"
         logging.error(message.format(', '.join(missing_props)))
-        logging.info("properties of object in error: {}".format(', '.join(str(e) for e in props.keys())))
-        logging.info("values of object in error: {}".format(', '.join(str(e) for e in props.values())))
-
+        try:
+            logging.info("properties of object in error: {}".format(', '.join(str(e) for e in props.keys())))
+            logging.info("values of object in error: {}".format(', '.join(str(e) for e in props.values())))
+        except AttributeError:
+            logging.error("Failed to print values of object. Object has no values")
+            raise
 
     return True
 

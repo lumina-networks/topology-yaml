@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="topology-yaml",
-    version="0.1.3.1",
+    version="0.1.5",
     url="https://github.com/lumina-networks/topology-yaml",
 
     author="Lumina NetDev",
@@ -13,7 +13,7 @@ setuptools.setup(
 
     packages=setuptools.find_packages(),
 
-    install_requires=['click', 'click-plugins', 'PyYAML'],
+    install_requires=['click', 'click-plugins', 'PyYAML', 'coloredlogs'],
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',

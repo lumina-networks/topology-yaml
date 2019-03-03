@@ -1,6 +1,5 @@
 import pytest
 from topology.core.topology import Topology
-from topology.core.exceptions import MandatoryPropertyException
 from topology.core.policies import topology_mandatory_fields_set, all_fields_mandatory
 
 @pytest.fixture(scope='module')
@@ -28,8 +27,8 @@ def mock_topo_props(request):
             'protocol': 'OpenFlow13'
         }],
         'customers': [{
-            'customer': 'test_customer',
             'connects_to': 'test_endpoint_name',
+            'customer': 'test_customer',
             'hostname': 'test_host_name',
             'port': 20
         }]
@@ -48,7 +47,7 @@ def test_validate(mock_topo_props):
     topo = Topology()
     topo.set_properties(mock_topo_props)
     assert topo.validate(topology_mandatory_fields_set) is True
-    with pytest.raises(MandatoryPropertyException):
+    with pytest.raises(AttributeError):
         topo.validate(all_fields_mandatory)
 
 
